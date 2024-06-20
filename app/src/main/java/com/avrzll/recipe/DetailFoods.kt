@@ -13,6 +13,7 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.core.content.FileProvider
 import com.avrzll.recipe.data.api.FoodList
 import com.bumptech.glide.Glide
@@ -26,6 +27,7 @@ class DetailFoods : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_foods)
+        enableEdgeToEdge()
 
         val getData: FoodList = intent.getParcelableExtra("data")!!
 

@@ -15,7 +15,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/img_foods_detail"
             android:layout_width="match_parent"
-            android:layout_height="320dp"
+            android:layout_height="394dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_launcher_background"
@@ -28,7 +28,7 @@
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="74dp"
             android:background="@drawable/roundedbtn"
             android:src="@drawable/ic_back_white"
             app:layout_constraintStart_toStartOf="parent"
