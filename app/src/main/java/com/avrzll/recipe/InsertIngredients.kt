@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.ViewModelProvider
@@ -26,6 +27,11 @@ class InsertIngredients : AppCompatActivity() {
 
         val editTextUserInput: EditText = findViewById(R.id.form_edit_ingredients)
         val btnAddIngredients: Button = findViewById(R.id.btn_edit_ingredients)
+        val btnBack: ImageView = findViewById(R.id.btn_back_from_masuk_bahan)
+
+        btnBack.setOnClickListener {
+            finish()
+        }
 
         btnAddIngredients.setOnClickListener {
             val userInput = editTextUserInput.text.toString()

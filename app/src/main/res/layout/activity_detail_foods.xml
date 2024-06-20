@@ -1,168 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/color_bg"
     tools:context=".DetailFoods">
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/img_foods_detail"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/btn_back_detail"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="20dp"
-        android:background="@drawable/roundedbtn"
-        android:src="@drawable/ic_back_white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/btn_share_detail"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/roundedbtn"
-        android:src="@drawable/ic_share_android_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_detail" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/img_foods_detail"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/title_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:text="Detail Resep"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_back_detail" />
+        <ImageButton
+            android:id="@+id/btn_back_detail"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/roundedbtn"
+            android:src="@drawable/ic_back_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/judul_resep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/plus_jakarta_sans_bold"
-        android:text="Nasi Goreng"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/btn_back_detail"
-        app:layout_constraintTop_toBottomOf="@+id/img_foods_detail" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="@+id/judul_resep"
-        app:layout_constraintTop_toBottomOf="@+id/judul_resep">
+        <ImageButton
+            android:id="@+id/btn_share_detail"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/roundedbtn"
+            android:src="@drawable/ic_share_android_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_back_detail" />
 
         <TextView
-            android:id="@+id/text_bahan_title"
+            android:id="@+id/title_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/plus_jakarta_sans_semi_bold"
-            android:text="Bahan"
-            android:textColor="@color/color_gray_text"
-            android:textSize="18sp" />
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:text="Detail Resep"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btn_back_detail" />
 
         <TextView
-            android:id="@+id/text_bahan_value"
+            android:id="@+id/judul_resep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/open_sans"
-            android:text=" • 1 Ekor ayam
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/plus_jakarta_sans_bold"
+            android:text="Nasi Goreng"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/btn_back_detail"
+            app:layout_constraintTop_toBottomOf="@+id/img_foods_detail" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/judul_resep"
+            app:layout_constraintTop_toBottomOf="@+id/judul_resep">
+
+            <TextView
+                android:id="@+id/text_bahan_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_sans_semi_bold"
+                android:text="Bahan"
+                android:textColor="@color/color_gray_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_bahan_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans"
+                android:text=" • 1 Ekor ayam
                         \n • 5 Siung bawang merah
                         \n • 3 Siung bawang putih
                         \n • 1 Ruas kunyit
                         \n • 1 Ruas jahe
                         \n • 500 ml Santan"
-            android:textColor="@color/color_gray_text_desc"
-            android:textSize="14sp" />
+                android:textColor="@color/color_gray_text_desc"
+                android:textSize="14sp" />
 
-    </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-
-        <TextView
-            android:id="@+id/text_instruksi_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/plus_jakarta_sans_semi_bold"
-            android:text="Instruction"
-            android:textColor="@color/color_gray_text"
-            android:textSize="18sp" />
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-        <TextView
-            android:id="@+id/text_intruksi_value"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/open_sans"
-            android:text=" 1. Rebus ayam dalam air hingga empuk, suwir-suwir       dagingnya.
+            <TextView
+                android:id="@+id/text_instruksi_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/plus_jakarta_sans_semi_bold"
+                android:text="Instruction"
+                android:textColor="@color/color_gray_text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_intruksi_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/open_sans"
+                android:text=" 1. Rebus ayam dalam air hingga empuk, suwir-suwir       dagingnya.
 \n 2. Tumis bumbu halus hingga harum.
 \n 3. Masukkan tumisan bumbu ke dalam rebusan ayam, tambahkan santan, aduk rata.
 \n 4. Sajikan soto Lamongan hangat dengan pelengkap"
-            android:textColor="@color/color_gray_text_desc"
-            android:textSize="14sp" />
-    </LinearLayout>
+                android:textColor="@color/color_gray_text_desc"
+                android:textSize="14sp" />
+        </LinearLayout>
 
-    <RelativeLayout
-        android:id="@+id/btn_tonton_nanti"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg_btn_search"
-        android:padding="10dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp">
-
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:id="@+id/btn_tonton_nanti"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_play_circle_white"
-            android:layout_centerVertical="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_btn_search"
+            android:gravity="center"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tonton Video"
-            android:textSize="16sp"
-            android:fontFamily="@font/plus_jakarta_sans_bold"
-            android:textColor="@android:color/white"
-            android:layout_toEndOf="@id/icon"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_play_circle_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/icon"
+                android:fontFamily="@font/plus_jakarta_sans_bold"
+                android:text="Tonton Video"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -9,6 +9,16 @@
     tools:context=".InsertIngredients">
 
     <ImageView
+        android:id="@+id/btn_back_from_masuk_bahan"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/btn_back_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,14 +30,14 @@
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="94dp"
         android:fontFamily="@font/plus_jakarta_sans_semi_bold"
         android:text="Tambahkan Bahan\nKe dalam persediaan"
-        android:textSize="24sp"
         android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_back_from_masuk_bahan" />
 
     <TextView
         android:id="@+id/textViewDescription"

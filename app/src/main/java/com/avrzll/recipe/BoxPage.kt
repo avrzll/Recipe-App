@@ -1,5 +1,6 @@
 package com.avrzll.recipe
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -17,6 +18,7 @@ import com.avrzll.recipe.data.api.FoodViewModelFactory
 import com.avrzll.recipe.data.room.IngredientsEntity
 import com.avrzll.recipe.data.room.IngredientsViewModel
 import com.avrzll.recipe.data.room.IngredientsViewModelFactory
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class BoxPage : Fragment() {
 
@@ -39,6 +41,12 @@ class BoxPage : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_box_page, container, false)
 
+        val btn_add_ingreds: FloatingActionButton = view.findViewById(R.id.btn_add_ingreds)
+
+        btn_add_ingreds.setOnClickListener {
+            goToAddIngreds()
+        }
+
         rvIngredients = view.findViewById(R.id.rv_box_supply)
             rvIngredients.layoutManager = LinearLayoutManager(requireContext())
 
@@ -57,5 +65,10 @@ class BoxPage : Fragment() {
         }
 
         return view
+    }
+
+    private fun goToAddIngreds() {
+        val navigateToAddIngreds = Intent(requireContext(), InsertIngredients::class.java)
+        startActivity(navigateToAddIngreds)
     }
 }

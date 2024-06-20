@@ -1,9 +1,7 @@
 package com.avrzll.recipe
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
@@ -34,7 +32,7 @@ class EditIngredients : AppCompatActivity() {
 
         formEditIngreds = findViewById(R.id.form_edit_ingredients)
         btnEdit = findViewById(R.id.btn_edit_ingredients)
-        btnBack = findViewById(R.id.btn_back)  // Inisialisasi btnBack
+        btnBack = findViewById(R.id.btn_back_from_masuk_bahan)  // Inisialisasi btnBack
 
         // Set nilai awal untuk formEditIngreds
         formEditIngreds.setText(getDataIngreds.name)
